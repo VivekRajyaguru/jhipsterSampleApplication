@@ -1,0 +1,35 @@
+entity User {
+	id Long,
+    userName String,
+    password String
+    
+}
+
+entity Permission {
+	id Long,
+    url String
+    userId User
+}
+
+relationship OneToMany {
+	User{id} to Permission
+}
+
+/* defining oneToOne relationships
+relationship OneToOne {
+} 
+*/
+
+
+/* defining ManyToOne
+relationship ManyToOne {
+}
+*/
+
+// Set pagination options
+paginate User, Employee with infinite-scroll
+paginate Job with pagination
+
+dto * with mapstruct
+
+angularSuffix * with mySuffix
